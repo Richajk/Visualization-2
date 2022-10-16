@@ -1,0 +1,11 @@
+Country,CPI,Pop_Density(per sq. mi.),Infant_mortality(per 1000 births),GDP,Literacy,Deathrate
+Afghanistan,16,48,163.07,700,36,20.34
+Brazil,38,22.1,29.61,7600,86.4,6.17
+China,45,136.9,24.18,5000,90.9,6.97
+Italy,56,193,5.94,26700,98.6,10.4
+Mongolia,35,1.8,53.79,1800,97.8,6.95
+Sri Lanka,37,308.2,14.35,3700,92.3,6.52
+Sweden,85,20,2.77,26800,99,10.31
+Switzerland,84,182.2,4.39,32700,99,8.49
+Germany,80,230.9,4.16,27600,99,10.62
+Ghana,43,93.6,51.43,2200,74.8,9.72
