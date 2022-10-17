@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Corruption Perception Index ",
+  "background": "#fcfce4",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Richajk/Visualization-2/main/10_pivotlong.csv"
+  },
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal", "title": " Year"},
+    "y": {"field": "CPI", "type": "quantitative", "title": "CPI"},
+    "color": {
+      "condition": {"param": "hover", "field": "Country", "type": "nominal"},
+      "value": "grey"
+    },
+    "opacity": {"condition": {"param": "hover", "value": 1}, "value": 0.2}
+  },
+  "layer": [
+    {
+      "description": "transparent layer to make it easier to trigger selection",
+      "params": [
+        {
+          "name": "hover",
+          "value": [{"Country": "Canada"}],
+          "select": {"type": "point", "fields": ["Country"], "on": "mouseover"}
+        }
+      ],
+      "mark": {"type": "line", "strokeWidth": 8, "stroke": "transparent"}
+    },
+    {"mark": "line"},
+    {
+      "encoding": {
+        "x": {"field": "Year"},
+        "y": {"aggregate": "sum", "field": "CPI"},
+        "tooltip": [
+          {
+            "field": "Year",
+            "type": "temporal",
+            "title": "Year",
+            "format": "%Y"
+          },
+          {"field": "CPI", "type": "quantitative", "format": ".1f"}
+        ]
+      },
+      "layer": [
+        {"mark": {"type": "circle"}},
+        {"mark": {"type": "text", "align": "left", "dx": 4}}
+      ]
+    }
+  ],
+  "config": {"view": {"stroke": null}}
+}
