@@ -1,0 +1,22 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 400,
+  "title": "Variation in Third World Countries' CPI ",
+  "background": "#fcfce4",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Richajk/Visualization-2/main/Boxplot.csv"
+  },
+  "mark": {"type": "boxplot", "extent": "min-max"},
+  "encoding": {
+    "x": {"field": "Country", "type": "nominal"},
+    "color": {"field": "Country", "type": "nominal"},
+    "y": {
+      "field": "CPI",
+      "type": "quantitative",
+      "scale": {"zero": false},
+      "axis": {"grid": false}
+    }
+  },
+  "config": {}
+}
