@@ -1,0 +1,28 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Correlation between CPI and Infant Mortality",
+  "background": "#fcfce4",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Richajk/Visualization-2/main/20_Country.csv"
+  },
+  "mark": "point",
+  "encoding": {
+    "x": {
+      "field": "Infant_Mortality",
+      "type": "quantitative",
+      "title": "Infant Mortality (per 1000 births)",
+      "axis": {"grid": false}
+    },
+    "y": {"field": "CPI", "type": "quantitative", "axis": {"grid": false}},
+    "color": {"value": "#53370d"},
+    "tooltip": [
+      {
+        "field": "Infant_Mortality",
+        "type": "quantitative",
+        "title": "Infant Mortality (per 1000 births)"
+      },
+      {"field": "CPI", "type": "quantitative", "format": ".1f"}
+    ]
+  },
+  "config": {}
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Correlation between CPI and Literacy rate",
+  "background": "#fcfce4",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Richajk/Visualization-2/main/20_Country.csv"
+  },
+  "mark": "point",
+  "encoding": {
+    "x": {
+      "field": "Literacy",
+      "type": "quantitative",
+      "title": "Literacy (%)",
+      "axis": {"grid": false}
+    },
+    "y": {"field": "CPI", "type": "quantitative", "axis": {"grid": false}},
+    "color": {"value": "#53370d"},
+    "tooltip": [
+      {"field": "Literacy", "type": "quantitative", "title": "Literacy (%)"},
+      {"field": "CPI", "type": "quantitative", "format": ".1f"}
+    ]
+  },
+  "config": {}
+}

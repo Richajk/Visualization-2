@@ -1,0 +1,24 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Correlation between CPI and GDP ",
+  "background": "#fcfce4",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Richajk/Visualization-2/main/20_Country.csv"
+  },
+  "mark": "point",
+  "encoding": {
+    "x": {
+      "field": "GDP",
+      "type": "quantitative",
+      "title": "GDP ($ per Capita)",
+      "axis": {"grid": false}
+    },
+    "y": {"field": "CPI", "type": "quantitative", "axis": {"grid": false}},
+    "color": {"value": "#53370d"},
+    "tooltip": [
+      {"field": "GDP", "type": "quantitative", "title": "GDP"},
+      {"field": "CPI", "type": "quantitative", "format": ".1f"}
+    ]
+  },
+  "config": {}
+}
