@@ -1,0 +1,20 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 300,
+  "height": 200,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Richajk/Visualization-2/main/Seychella.csv"
+  },
+  "title": "Seychelles' CPI",
+  "mark": "area",
+  "encoding": {
+    "x": {"field": "year", "type": "nominal", "title": "Year"},
+    "y": {
+      "field": "CPI",
+      "type": "quantitative",
+      "title": "Corruption Perception Index"
+    },
+    "color": {"value": "#516f51"}
+  },
+  "config": {}
+}
